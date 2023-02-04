@@ -9,7 +9,7 @@ export const Room2ContextProvider = function ({ children }) {
 
   const randomNumberOfBeds = Math.ceil(Math.random() * 3) + 2;
   const [room2Name, onChangeRoom2Name, onResetRoom2Name] = useInput(
-    isShared ? "Shared room" : "Suite room"
+    isShared ? "Shared Room" : "Suite Room"
   );
   const [room2Price, onChangeRoom2Price, onResetRoom2Price] = useInput(
     isShared
