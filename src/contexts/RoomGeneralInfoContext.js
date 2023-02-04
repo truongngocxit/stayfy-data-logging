@@ -7,6 +7,10 @@ export const RoomGeneralInfoContextProvider = function ({ children }) {
   const [lodgeName, onLodgeNameChange, onResetLodgeName] = useInput("");
   const [location, onLocationChange, onResetLocation] = useInput("");
   const [city, onCityChange, onResetCity] = useInput("");
+  const [description, onDescriptionChange, onResetDescription] = useInput("");
+  const [languages, onLanguagesChange, onResetLanguages] = useInput(
+    "Vietnamese, English"
+  );
 
   return (
     <roomGeneralInfoContext.Provider
@@ -14,6 +18,8 @@ export const RoomGeneralInfoContextProvider = function ({ children }) {
         lodgeName: [lodgeName, onLodgeNameChange, onResetLodgeName],
         location: [location, onLocationChange, onResetLocation],
         city: [city, onCityChange, onResetCity],
+        description: [description, onDescriptionChange, onResetDescription],
+        languages: [languages, onLanguagesChange, onResetLanguages],
       }}
     >
       {children}

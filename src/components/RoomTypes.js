@@ -8,6 +8,7 @@ export default function RoomTypes() {
   const {
     room1Name: [room1Name, onChangeRoom1Name, onResetRoom1Name],
     room1Price: [room1Price, onChangeRoom1Price, onResetRoom1Price],
+    room1Quantity: [room1Quantity, onChangeRoom1Quantity, onResetRoom1Quantity],
     room1Bed: [room1Beds, onChangeRoom1Beds, onResetRoom1Beds],
     room1Type: [room1Type, onChangeRoom1Type, onResetRoom1Type],
     room1Image: [room1Image, onChangeRoom1Image, onResetRoom1Image],
@@ -16,6 +17,7 @@ export default function RoomTypes() {
   const {
     room2Name: [room2Name, onChangeRoom2Name, onResetRoom2Name],
     room2Price: [room2Price, onChangeRoom2Price, onResetRoom2Price],
+    room2Quantity: [room2Quantity, onChangeRoom2Quantity, onResetRoom2Quantity],
     room2Bed: [room2Beds, onChangeRoom2Beds, onResetRoom2Beds],
     room2Type: [room2Type, onChangeRoom2Type, onResetRoom2Type],
     room2Image: [room2Image, onChangeRoom2Image, onResetRoom2Image],
@@ -31,6 +33,11 @@ export default function RoomTypes() {
       entireHousePrice,
       onChangeEntireHousePrice,
       onResetEntireHousePrice,
+    ],
+    entireHouseQuantity: [
+      entireHouseQuantity,
+      onChangeEntireHouseQuantity,
+      onResetEntireHouseQuantity,
     ],
     entireHouseBed: [
       entireHouseBeds,
@@ -63,6 +70,8 @@ export default function RoomTypes() {
         onTypeChange={onChangeRoom1Type}
         image={room1Image}
         onImageChange={onChangeRoom1Image}
+        quantity={room1Quantity}
+        onQuantityChange={onChangeRoom1Quantity}
       />
       <RoomTypeInfo
         roomNo={2}
@@ -76,6 +85,8 @@ export default function RoomTypes() {
         onTypeChange={onChangeRoom2Type}
         image={room2Image}
         onImageChange={onChangeRoom2Image}
+        quantity={room2Quantity}
+        onQuantityChange={onChangeRoom2Quantity}
       />
       <RoomTypeInfo
         roomNo={"Entire"}
@@ -89,6 +100,8 @@ export default function RoomTypes() {
         onTypeChange={onChangeEntireHouseType}
         image={entireHouseImage}
         onImageChange={onChangeEntireHouseImage}
+        quantity={entireHouseQuantity}
+        onQuantityChange={onChangeEntireHouseQuantity}
       />
     </>
   );

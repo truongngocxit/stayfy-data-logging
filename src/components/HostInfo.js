@@ -10,12 +10,14 @@ export default function HostInfo() {
     hostEmail,
     hostPhone: [hostPhone, onChangeHostPhone, onResetHostPhone],
     hostDate: [hostDate, onChangeHostDate, onResetHostDate],
+    hostImage: [hostImage, onChangeHostImage, onResetHostImage],
   } = useContext(hostInfoContext);
   return (
     <InputGroup heading="Host information">
       <Input label="Host name" value={hostName} onChange={onChangeHostName} />
       <Input label="Email" value={hostEmail} />
       <Input label="Phone" value={hostPhone} onChange={onChangeHostPhone} />
+      <Input label="Image" value={hostImage} onChange={onChangeHostImage} />
       <Input label="Joined Date" value={hostDate} onChange={onChangeHostDate} />
     </InputGroup>
   );

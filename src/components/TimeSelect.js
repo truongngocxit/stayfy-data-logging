@@ -4,22 +4,31 @@ import timeContext from "../contexts/TimeContext";
 
 export default function TimeSelect() {
   const {
-    checkin: [checkin, changeCheckin],
-    checkout: [checkout, changeCheckout],
+    checkinStart: [checkinStart, changeCheckinStart],
+    checkinEnd: [checkinEnd, changeCheckinEnd],
+    checkoutBefore: [checkoutBefore, changeCheckoutBefore],
   } = useContext(timeContext);
   return (
-    <InputGroup heading="Checkin/Checkout">
+    <InputGroup heading="Checkin/CheckoutBefore">
       <label className="select">
-        <span>Checkin</span>
-        <select value={checkin} onChange={changeCheckin}>
+        <span>Checkin Start</span>
+        <select value={checkinStart} onChange={changeCheckinStart}>
           {times.map((t) => (
             <option value={t}>{t}</option>
           ))}
         </select>
       </label>
       <label className="select">
-        <span>Checkout</span>
-        <select value={checkout} onChange={changeCheckout}>
+        <span>Checkin End</span>
+        <select value={checkinEnd} onChange={changeCheckinEnd}>
+          {times.map((t) => (
+            <option value={t}>{t}</option>
+          ))}
+        </select>
+      </label>
+      <label className="select">
+        <span>Checkout Before</span>
+        <select value={checkoutBefore} onChange={changeCheckoutBefore}>
           {times.map((t) => (
             <option value={t}>{t}</option>
           ))}

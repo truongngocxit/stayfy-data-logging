@@ -20,6 +20,7 @@ const months = [
 
 export const HostInfoContextProvider = function ({ children }) {
   const [hostName, onChangeHostName, onResetHostName] = useInput("");
+  const [hostImage, onChangeHostImage, onResetHostImage] = useInput("");
   const hostEmail = `${hostName.toLowerCase().replace(" ", "")}@mail.com`;
   const [hostPhone, onChangeHostPhone, onResetHostPhone] = useInput(
     Math.random().toFixed(9).toString().replace(".", "")
@@ -36,6 +37,7 @@ export const HostInfoContextProvider = function ({ children }) {
       value={{
         hostName: [hostName, onChangeHostName, onResetHostName],
         hostEmail,
+        hostImage: [hostImage, onChangeHostImage, onResetHostImage],
         hostPhone: [hostPhone, onChangeHostPhone, onResetHostPhone],
         hostDate: [hostDate, onChangeHostDate, onResetHostDate],
       }}

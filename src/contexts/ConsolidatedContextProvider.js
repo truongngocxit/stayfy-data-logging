@@ -6,6 +6,8 @@ import { HostInfoContextProvider } from "./HostInfoContext";
 import { AmenitiesContextProvider } from "./AmenitiesContext";
 import { FeaturesContextProvider } from "./FeaturesContext";
 import { TimeContextProvider } from "./TimeContext";
+import { RoomImagesContextProvider } from "./RoomImagesContext";
+import { MiscInfoContextProvider } from "./MiscInfoContext";
 
 const ConsolidatedContextProvider = function ({ children }) {
   return (
@@ -16,7 +18,13 @@ const ConsolidatedContextProvider = function ({ children }) {
             <HostInfoContextProvider>
               <AmenitiesContextProvider>
                 <FeaturesContextProvider>
-                  <TimeContextProvider>{children}</TimeContextProvider>
+                  <TimeContextProvider>
+                    <RoomImagesContextProvider>
+                      <MiscInfoContextProvider>
+                        {children}
+                      </MiscInfoContextProvider>
+                    </RoomImagesContextProvider>
+                  </TimeContextProvider>
                 </FeaturesContextProvider>
               </AmenitiesContextProvider>
             </HostInfoContextProvider>

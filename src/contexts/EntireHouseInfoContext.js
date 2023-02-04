@@ -8,8 +8,18 @@ export const EntireHouseContextProvider = function ({ children }) {
     useInput("Entire House");
   const [entireHousePrice, onChangeEntireHousePrice, onResetEntireHousePrice] =
     useInput((Math.random() * 20 + 200).toFixed(2));
+  const [
+    entireHouseQuantity,
+    onChangeEntireHouseQuantity,
+    onResetEntireHouseQuantity,
+  ] = useInput(1);
   const [entireHouseBeds, onChangeEntireHouseBeds, onResetEntireHouseBeds] =
     useInput("A whole house to your use");
+  const [
+    entireHouseSleeps,
+    onChangeEntireHouseSleeps,
+    onResetEntireHouseSleeps,
+  ] = useInput(Math.ceil(Math.random() * 7) + 9);
   const [entireHouseType, onChangeEntireHouseType, onResetEntireHouseType] =
     useInput("entire");
 
@@ -29,16 +39,27 @@ export const EntireHouseContextProvider = function ({ children }) {
           onChangeEntireHousePrice,
           onResetEntireHousePrice,
         ],
+        entireHouseQuantity: [
+          entireHouseQuantity,
+          onChangeEntireHouseQuantity,
+          onResetEntireHouseQuantity,
+        ],
         entireHouseBed: [
           entireHouseBeds,
           onChangeEntireHouseBeds,
           onResetEntireHouseBeds,
+        ],
+        entireHouseSleeps: [
+          entireHouseSleeps,
+          onChangeEntireHouseSleeps,
+          onResetEntireHouseSleeps,
         ],
         entireHouseType: [
           entireHouseType,
           onChangeEntireHouseType,
           onResetEntireHouseType,
         ],
+
         entireHouseImage: [
           entireHouseImage,
           onChangeEntireHouseImage,
