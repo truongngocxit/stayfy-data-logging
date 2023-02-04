@@ -10,10 +10,12 @@ export default function RoomTypeInfo({
   image,
   type,
   quantity,
+  sleeps,
   onTypeChange,
   onNameChange,
   onPriceChange,
   onBedsChange,
+  onSleepsChange,
   onImageChange,
   onQuantityChange,
 }) {
@@ -27,6 +29,7 @@ export default function RoomTypeInfo({
         onChange={onQuantityChange}
       />
       <Input label="Room beds" value={beds} onChange={onBedsChange} />
+      <Input label="Room sleeps" value={sleeps} onChange={onSleepsChange} />
       <Input label="Room Image" value={image} onChange={onImageChange} />
       <RoomTypeSelect value={type} onChange={onTypeChange} />
     </InputGroup>

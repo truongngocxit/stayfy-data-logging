@@ -10,6 +10,7 @@ export default function RoomTypes() {
     room1Price: [room1Price, onChangeRoom1Price, onResetRoom1Price],
     room1Quantity: [room1Quantity, onChangeRoom1Quantity, onResetRoom1Quantity],
     room1Bed: [room1Beds, onChangeRoom1Beds, onResetRoom1Beds],
+    room1Sleeps: [room1Sleeps, onChangeRoom1Sleeps, onResetRoom1Sleeps],
     room1Type: [room1Type, onChangeRoom1Type, onResetRoom1Type],
     room1Image: [room1Image, onChangeRoom1Image, onResetRoom1Image],
   } = useContext(room1Context);
@@ -19,6 +20,7 @@ export default function RoomTypes() {
     room2Price: [room2Price, onChangeRoom2Price, onResetRoom2Price],
     room2Quantity: [room2Quantity, onChangeRoom2Quantity, onResetRoom2Quantity],
     room2Bed: [room2Beds, onChangeRoom2Beds, onResetRoom2Beds],
+    room2Sleeps: [room2Sleeps, onChangeRoom2Sleeps, onResetRoom2Sleeps],
     room2Type: [room2Type, onChangeRoom2Type, onResetRoom2Type],
     room2Image: [room2Image, onChangeRoom2Image, onResetRoom2Image],
   } = useContext(room2Context);
@@ -43,6 +45,11 @@ export default function RoomTypes() {
       entireHouseBeds,
       onChangeEntireHouseBeds,
       onResetEntireHouseBeds,
+    ],
+    entireHouseSleeps: [
+      entireHouseSleeps,
+      onChangeEntireHouseSleeps,
+      onResetEntireHouseSleeps,
     ],
     entireHouseType: [
       entireHouseType,
@@ -72,6 +79,8 @@ export default function RoomTypes() {
         onImageChange={onChangeRoom1Image}
         quantity={room1Quantity}
         onQuantityChange={onChangeRoom1Quantity}
+        sleeps={room1Sleeps}
+        onSleepsChange={onChangeRoom1Sleeps}
       />
       <RoomTypeInfo
         roomNo={2}
@@ -87,6 +96,8 @@ export default function RoomTypes() {
         onImageChange={onChangeRoom2Image}
         quantity={room2Quantity}
         onQuantityChange={onChangeRoom2Quantity}
+        sleeps={room2Sleeps}
+        onSleepsChange={onChangeRoom2Sleeps}
       />
       <RoomTypeInfo
         roomNo={"Entire"}
@@ -102,6 +113,8 @@ export default function RoomTypes() {
         onImageChange={onChangeEntireHouseImage}
         quantity={entireHouseQuantity}
         onQuantityChange={onChangeEntireHouseQuantity}
+        sleeps={entireHouseSleeps}
+        onSleepsChange={onChangeEntireHouseSleeps}
       />
     </>
   );
