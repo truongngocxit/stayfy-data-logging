@@ -1,52 +1,96 @@
 import { createContext } from "react";
-import useInput from "../custom-hooks/useInput";
+import useCheckbox from "../custom-hooks/useCheckbox";
 
 const amenitiesContext = createContext();
 
 export const AmenitiesContextProvider = function ({ children }) {
-  const [hasAirCont, changeHasAirCont] = useInput(true);
-  const [hasBalcony, changeHasBalcony] = useInput(true);
-  const [hasBarbecue, changeHasBarbecue] = useInput(true);
-  const [hasBreakfast, changeHasBreakfast] = useInput(true);
-  const [hasCityView, changeHasCityView] = useInput(true);
-  const [hasEssentials, changeHasEssentials] = useInput(true);
-  const [hasDryer, changeHasDryer] = useInput(true);
+  const [hasAirCont, changeHasAirCont] = useCheckbox(randomBooleanFavorTrue());
+  const [hasBalcony, changeHasBalcony] = useCheckbox(randomBooleanFavorTrue());
+  const [hasBarbecue, changeHasBarbecue] = useCheckbox(
+    randomBooleanFavorTrue()
+  );
+  const [hasBreakfast, changeHasBreakfast] = useCheckbox(
+    randomBooleanFavorTrue()
+  );
+  const [hasCityView, changeHasCityView] = useCheckbox(
+    randomBooleanFavorTrue()
+  );
+  const [hasEssentials, changeHasEssentials] = useCheckbox(
+    randomBooleanFavorTrue()
+  );
+  const [hasDryer, changeHasDryer] = useCheckbox(randomBooleanFavorTrue());
 
-  const [hasExtraBedware, changeHasExtraBedware] = useInput(true);
-  const [hasFireAlarm, changeHasFireAlarm] = useInput(true);
-  const [hasFireExtinguisher, changeHasFireExtinguisher] = useInput(true);
-  const [hasFirstAid, changeHasFirstAid] = useInput(true);
-  const [hasFreeParking, changeHasFreeParking] = useInput(true);
-  const [hasFridge, changeHasFridge] = useInput(true);
-  const [hasGarden, changeHasGarden] = useInput(true);
-  const [hasHairDryer, changeHasHairDryer] = useInput(true);
+  const [hasExtraBedware, changeHasExtraBedware] = useCheckbox(
+    randomBooleanFavorTrue()
+  );
+  const [hasFireAlarm, changeHasFireAlarm] = useCheckbox(
+    randomBooleanFavorTrue()
+  );
+  const [hasFireExtinguisher, changeHasFireExtinguisher] = useCheckbox(
+    randomBooleanFavorTrue()
+  );
+  const [hasFirstAid, changeHasFirstAid] = useCheckbox(
+    randomBooleanFavorTrue()
+  );
+  const [hasFreeParking, changeHasFreeParking] = useCheckbox(
+    randomBooleanFavorTrue()
+  );
+  const [hasFridge, changeHasFridge] = useCheckbox(randomBooleanFavorTrue());
+  const [hasGarden, changeHasGarden] = useCheckbox(randomBooleanFavorTrue());
+  const [hasHairDryer, changeHasHairDryer] = useCheckbox(
+    randomBooleanFavorTrue()
+  );
 
-  const [hasHotKettle, changeHasHotKettle] = useInput(true);
-  const [hasHotTub, changeHasHotTub] = useInput(true);
-  const [hasHotWater, changeHasHotWater] = useInput(true);
-  const [hasIndoorFireplace, changeHasIndoorFireplace] = useInput(true);
-  const [hasKitchen, changeHasKitchen] = useInput(true);
+  const [hasHotKettle, changeHasHotKettle] = useCheckbox(
+    randomBooleanFavorTrue()
+  );
+  const [hasHotTub, changeHasHotTub] = useCheckbox(randomBooleanFavorTrue());
+  const [hasHotWater, changeHasHotWater] = useCheckbox(
+    randomBooleanFavorTrue()
+  );
+  const [hasIndoorFireplace, changeHasIndoorFireplace] = useCheckbox(
+    randomBooleanFavorTrue()
+  );
+  const [hasKitchen, changeHasKitchen] = useCheckbox(randomBooleanFavorTrue());
 
-  const [hasLongtermStay, changeHasLongtermStay] = useInput(true);
-  const [hasMosquitoNet, changeHasMosquitoNet] = useInput(true);
-  const [hasMountainView, changeHasMountainView] = useInput(true);
-  const [hasNearBeach, changeHasNearBeach] = useInput(true);
-  const [hasPets, changeHasPets] = useInput(true);
+  const [hasLongtermStay, changeHasLongtermStay] = useCheckbox(
+    randomBooleanFavorTrue()
+  );
+  const [hasMosquitoNet, changeHasMosquitoNet] = useCheckbox(
+    randomBooleanFavorTrue()
+  );
+  const [hasMountainView, changeHasMountainView] = useCheckbox(
+    randomBooleanFavorTrue()
+  );
+  const [hasNearBeach, changeHasNearBeach] = useCheckbox(
+    randomBooleanFavorTrue()
+  );
+  const [hasPets, changeHasPets] = useCheckbox(randomBooleanFavorTrue());
 
-  const [hasPool, changeHasPool] = useInput(true);
-  const [hasSafe, changeHasSafe] = useInput(true);
-  const [hasSecurityCamera, changeHasSecurityCamera] = useInput(true);
-  const [hasSecurityStaff, changeHasSecurityStaff] = useInput(true);
-  const [hasSelfCheckin, changeHasSelfCheckin] = useInput(true);
+  const [hasPool, changeHasPool] = useCheckbox(randomBooleanFavorTrue());
+  const [hasSafe, changeHasSafe] = useCheckbox(randomBooleanFavorTrue());
+  const [hasSecurityCamera, changeHasSecurityCamera] = useCheckbox(
+    randomBooleanFavorTrue()
+  );
+  const [hasSecurityStaff, changeHasSecurityStaff] = useCheckbox(
+    randomBooleanFavorTrue()
+  );
+  const [hasSelfCheckin, changeHasSelfCheckin] = useCheckbox(
+    randomBooleanFavorTrue()
+  );
 
-  const [hasShampoo, changeHasShampoo] = useInput(true);
-  const [hasShowerGel, changeHasShowerGel] = useInput(true);
-  const [hasSmoking, changeHasSmoking] = useInput(true);
-  const [hasTV, changeHasTV] = useInput(true);
-  const [hasWasher, changeHasWasher] = useInput(true);
+  const [hasShampoo, changeHasShampoo] = useCheckbox(randomBooleanFavorTrue());
+  const [hasShowerGel, changeHasShowerGel] = useCheckbox(
+    randomBooleanFavorTrue()
+  );
+  const [hasSmoking, changeHasSmoking] = useCheckbox(randomBooleanFavorTrue());
+  const [hasTV, changeHasTV] = useCheckbox(randomBooleanFavorTrue());
+  const [hasWasher, changeHasWasher] = useCheckbox(randomBooleanFavorTrue());
 
-  const [hasWifi, changeHasWifi] = useInput(true);
-  const [hasWorkspace, changeHasWorkspace] = useInput(true);
+  const [hasWifi, changeHasWifi] = useCheckbox(randomBooleanFavorTrue());
+  const [hasWorkspace, changeHasWorkspace] = useCheckbox(
+    randomBooleanFavorTrue()
+  );
 
   return (
     <amenitiesContext.Provider
@@ -96,3 +140,7 @@ export const AmenitiesContextProvider = function ({ children }) {
 };
 
 export default amenitiesContext;
+
+function randomBooleanFavorTrue() {
+  return Math.random() < 0.72 ? true : false;
+}

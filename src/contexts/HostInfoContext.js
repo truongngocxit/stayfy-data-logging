@@ -20,7 +20,11 @@ const months = [
 
 export const HostInfoContextProvider = function ({ children }) {
   const [hostName, onChangeHostName, onResetHostName] = useInput("");
-  const [hostImage, onChangeHostImage, onResetHostImage] = useInput("");
+  const [hostImage, onChangeHostImage, onResetHostImage] = useInput(
+    `https://firebasestorage.googleapis.com/v0/b/stayfy-d4fc1.appspot.com/o/host-images%2Fhost-${Math.ceil(
+      Math.random() * 15
+    )}.webp?alt=media&token=88d0e964-badf-4bbc-b6db-f5885d5930f3`
+  );
   const hostEmail = `${hostName.toLowerCase().replace(" ", "")}@mail.com`;
   const [hostPhone, onChangeHostPhone, onResetHostPhone] = useInput(
     Math.random().toFixed(9).toString().replace(".", "")

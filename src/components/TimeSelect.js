@@ -14,7 +14,9 @@ export default function TimeSelect() {
         <span>Checkin Start</span>
         <select value={checkinStart} onChange={changeCheckinStart}>
           {times.map((t) => (
-            <option value={t}>{t}</option>
+            <option key={t} value={t}>
+              {t}
+            </option>
           ))}
         </select>
       </label>
@@ -22,7 +24,9 @@ export default function TimeSelect() {
         <span>Checkin End</span>
         <select value={checkinEnd} onChange={changeCheckinEnd}>
           {times.map((t) => (
-            <option value={t}>{t}</option>
+            <option key={t} value={t}>
+              {t}
+            </option>
           ))}
         </select>
       </label>
@@ -30,7 +34,9 @@ export default function TimeSelect() {
         <span>Checkout Before</span>
         <select value={checkoutBefore} onChange={changeCheckoutBefore}>
           {times.map((t) => (
-            <option value={t}>{t}</option>
+            <option key={t} value={t}>
+              {t}
+            </option>
           ))}
         </select>
       </label>

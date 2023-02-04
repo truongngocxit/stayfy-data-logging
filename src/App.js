@@ -141,6 +141,13 @@ function App() {
     trending: [isTrending],
     tropical: [isTropical],
     villa: [isVilla],
+    petsFriendly: [isPetsFriendly],
+    entireHouse: [isEntireHouse],
+    sharedRoom: [isSharedRoom],
+    private: [isPrivate],
+    kidsFriendly: [isKidsFriendly],
+    golf: [isGolf],
+    backpackFriendly: [isBackpackFriendly],
   } = useContext(featuresContext);
 
   const handleSubmitInfo = function (event) {
@@ -201,6 +208,13 @@ function App() {
         isTrending,
         isTropical,
         isVilla,
+        isPetsFriendly,
+        isEntireHouse,
+        isSharedRoom,
+        isPrivate,
+        isKidsFriendly,
+        isGolf,
+        isBackpackFriendly,
       },
       city,
       description,
@@ -263,6 +277,7 @@ function App() {
         headers: {
           "Content-Type": "application/json",
         },
+        body: JSON.stringify(data),
       }
     );
   };
@@ -276,7 +291,9 @@ function App() {
       <AmenitiesSelect />
       <FeaturesSelect />
       <TimeSelect />
-      <button type="button">SUBMIT LODGE</button>
+      <button type="button" onClick={handleSubmitInfo}>
+        SUBMIT LODGE
+      </button>
     </div>
   );
 }

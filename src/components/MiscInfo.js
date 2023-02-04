@@ -34,7 +34,9 @@ const MiscInfo = function () {
         <span>Prepayment amount</span>
         <select value={prepayment} onChange={changePrepayment}>
           {["full", "half", "none"].map((p) => (
-            <option value={p}>{p}</option>
+            <option key={p} value={p}>
+              {p}
+            </option>
           ))}
         </select>
       </label>
@@ -42,7 +44,9 @@ const MiscInfo = function () {
         <span>Refund amount when cancellation</span>
         <select value={refund} onChange={changeRefund}>
           {["full", "half", "none"].map((r) => (
-            <option value={r}>{r}</option>
+            <option key={r} value={r}>
+              {r}
+            </option>
           ))}
         </select>
       </label>

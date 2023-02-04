@@ -1,23 +1,32 @@
 import { createContext } from "react";
-import useInput from "../custom-hooks/useInput";
+import useCheckbox from "../custom-hooks/useCheckbox";
 
 const featuresContext = createContext();
 
 export const FeaturesContextProvider = function ({ children }) {
-  const [isAmazingView, changeIsAmazingView] = useInput(true);
-  const [isBeachView, changeIsBeachView] = useInput(true);
-  const [isCamp, changeIsCamp] = useInput(true);
-  const [isCold, changeIsCold] = useInput(true);
-  const [isCountryside, changeIsCountryside] = useInput(true);
-  const [isDesign, changeIsDesign] = useInput(true);
-  const [isFarmHouse, changeIsFarmHouse] = useInput(true);
-  const [isHandicapped, changeIsHandicapped] = useInput(true);
-  const [isNew, changeIsNew] = useInput(true);
-  const [isPool, changeIsPool] = useInput(true);
-  const [isTinyHouse, changeIsTinyHouse] = useInput(true);
-  const [isTrending, changeIsTrending] = useInput(true);
-  const [isTropical, changeIsTropical] = useInput(true);
-  const [isVilla, changeIsVilla] = useInput(true);
+  const [isAmazingView, changeIsAmazingView] = useCheckbox(randomBoolean());
+  const [isBeachView, changeIsBeachView] = useCheckbox(randomBoolean());
+  const [isCamp, changeIsCamp] = useCheckbox(randomBoolean());
+  const [isCold, changeIsCold] = useCheckbox(randomBoolean());
+  const [isCountryside, changeIsCountryside] = useCheckbox(randomBoolean());
+  const [isDesign, changeIsDesign] = useCheckbox(randomBoolean());
+  const [isFarmHouse, changeIsFarmHouse] = useCheckbox(randomBoolean());
+  const [isHandicapped, changeIsHandicapped] = useCheckbox(randomBoolean());
+  const [isNew, changeIsNew] = useCheckbox(randomBoolean());
+  const [isPool, changeIsPool] = useCheckbox(randomBoolean());
+  const [isTinyHouse, changeIsTinyHouse] = useCheckbox(randomBoolean());
+  const [isTrending, changeIsTrending] = useCheckbox(randomBoolean());
+  const [isTropical, changeIsTropical] = useCheckbox(randomBoolean());
+  const [isVilla, changeIsVilla] = useCheckbox(randomBoolean());
+  const [isPetsFriendly, changeIsPetsFriendly] = useCheckbox(randomBoolean());
+  const [isEntireHouse, changeIsEntireHouse] = useCheckbox(randomBoolean());
+  const [isSharedRoom, changeIsSharedRoom] = useCheckbox(randomBoolean());
+  const [isPrivate, changeIsPrivate] = useCheckbox(randomBoolean());
+  const [isKidsFriendly, changeIsKidsFriendly] = useCheckbox(randomBoolean());
+  const [isGolf, changeIsGolf] = useCheckbox(randomBoolean());
+  const [isBackpackFriendly, changeIsBackpackFriendly] = useCheckbox(
+    randomBoolean()
+  );
 
   return (
     <featuresContext.Provider
@@ -36,6 +45,13 @@ export const FeaturesContextProvider = function ({ children }) {
         trending: [isTrending, changeIsTrending],
         tropical: [isTropical, changeIsTropical],
         villa: [isVilla, changeIsVilla],
+        petsFriendly: [isPetsFriendly, changeIsPetsFriendly],
+        entireHouse: [isEntireHouse, changeIsEntireHouse],
+        sharedRoom: [isSharedRoom, changeIsSharedRoom],
+        private: [isPrivate, changeIsPrivate],
+        kidsFriendly: [isKidsFriendly, changeIsKidsFriendly],
+        golf: [isGolf, changeIsGolf],
+        backpackFriendly: [isBackpackFriendly, changeIsBackpackFriendly],
       }}
     >
       {children}
@@ -44,3 +60,7 @@ export const FeaturesContextProvider = function ({ children }) {
 };
 
 export default featuresContext;
+
+function randomBoolean() {
+  return Math.random() < 0.5 ? true : false;
+}

@@ -1,5 +1,6 @@
 import InputGroup from "./InputGroup";
 import Input from "./Input";
+import Textarea from "./Textarea";
 import AddImagesModal from "./AddImagesModal";
 import useModal from "../custom-hooks/useModal";
 import { useContext } from "react";
@@ -31,8 +32,8 @@ export default function RoomGeneralInfo({ className }) {
         value={city}
         onChange={onCityChange}
       />
-      <Input
-        label="Description (100 words or more)"
+      <Textarea
+        label="Description (100 words or more) *paragraph separated by \n"
         value={description}
         onChange={onDescriptionChange}
       />

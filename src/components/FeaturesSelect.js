@@ -19,6 +19,13 @@ export default function FeaturesSelect() {
     trending: [isTrending, changeIsTrending],
     tropical: [isTropical, changeIsTropical],
     villa: [isVilla, changeIsVilla],
+    petsFriendly: [isPetsFriendly, changeIsPetsFriendly],
+    entireHouse: [isEntireHouse, changeIsEntireHouse],
+    sharedRoom: [isSharedRoom, changeIsSharedRoom],
+    private: [isPrivate, changeIsPrivate],
+    kidsFriendly: [isKidsFriendly, changeIsKidsFriendly],
+    golf: [isGolf, changeIsGolf],
+    backpackFriendly: [isBackpackFriendly, changeIsBackpackFriendly],
   } = useContext(featuresContext);
   return (
     <InputGroup heading="Room Features" className="amenities-select">
@@ -68,6 +75,33 @@ export default function FeaturesSelect() {
         onChange={changeIsTropical}
       />
       <Checkbox label="Villa" value={isVilla} onChange={changeIsVilla} />
+      <Checkbox
+        label="Pets Friendly"
+        value={isPetsFriendly}
+        onChange={changeIsPetsFriendly}
+      />
+      <Checkbox
+        label="Entire House"
+        value={isEntireHouse}
+        onChange={changeIsEntireHouse}
+      />
+      <Checkbox
+        label="Shared Room"
+        value={isSharedRoom}
+        onChange={changeIsSharedRoom}
+      />
+      <Checkbox label="Private" value={isPrivate} onChange={changeIsPrivate} />
+      <Checkbox
+        label="Kids Friendly"
+        value={isKidsFriendly}
+        onChange={changeIsKidsFriendly}
+      />
+      <Checkbox label="Golf" value={isGolf} onChange={changeIsGolf} />
+      <Checkbox
+        label="Backpack Friendly"
+        value={isBackpackFriendly}
+        onChange={changeIsBackpackFriendly}
+      />
     </InputGroup>
   );
 }

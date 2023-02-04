@@ -4,7 +4,8 @@ import useInput from "../custom-hooks/useInput";
 const roomGeneralInfoContext = createContext();
 
 export const RoomGeneralInfoContextProvider = function ({ children }) {
-  const [lodgeName, onLodgeNameChange, onResetLodgeName] = useInput("");
+  const [lodgeName, onLodgeNameChange, onResetLodgeName] =
+    useInput(" Homestay");
   const [location, onLocationChange, onResetLocation] = useInput("");
   const [city, onCityChange, onResetCity] = useInput("");
   const [description, onDescriptionChange, onResetDescription] = useInput("");
