@@ -16,6 +16,8 @@ import room1Context from "./contexts/Room1InfoContext";
 import room2Context from "./contexts/Room2InfoContext";
 import entireHouseContext from "./contexts/EntireHouseInfoContext";
 import featuresContext from "./contexts/FeaturesContext";
+import useInput from "./custom-hooks/useInput";
+import Input from "./components/Input";
 
 function App() {
   const {
@@ -150,10 +152,13 @@ function App() {
     backpackFriendly: [isBackpackFriendly],
   } = useContext(featuresContext);
 
+  const [src, changeSrc] = useInput("");
+
   const handleSubmitInfo = function (event) {
     event.preventDefault();
 
     const data = {
+      dataSrc: src,
       amenities: {
         hasAirCont,
         hasBalcony,
@@ -284,6 +289,7 @@ function App() {
 
   return (
     <div className="page">
+      <Input label={"Lodge Source"} value={src} onChange={changeSrc} />
       <RoomGeneralInfo />
       <MiscInfo />
       <RoomTypes />
